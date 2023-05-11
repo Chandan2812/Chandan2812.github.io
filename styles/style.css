@@ -7,6 +7,10 @@
     text-decoration: none;
     scroll-behavior: smooth;
 }
+:root{
+    --main:rgb(168, 142, 238);
+    --bg: rgb(255, 255, 255);
+}
 
 header{
     width: 100%;
@@ -17,7 +21,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color: var(--bg);
     padding: 16px 12%;
     transition: all .50s ease;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -30,7 +34,7 @@ header img{
 .logo{
     display: flex;
     align-items: center;
-    color: rgb(168, 142, 238);
+    color: var(--main);
 }
 
 
@@ -45,7 +49,7 @@ header img{
     padding: 5px 0;
     margin: 0 20px;
     transition: all .50s ease;
-    color: rgb(168, 142, 238);
+    color: var(--main);
 }
 
 #nav-menu a:hover{
@@ -84,7 +88,7 @@ header img{
     width: 98.5vw;
     height: 100vh;
     z-index: -10;
-    background-color:rgb(168, 142, 238);
+    background-color:var(--main);
     clip-path: polygon(74% 0%,101% 0%,100% 20%,101% 101%,89% 101%,58% 101%,76% 49%,58% 0%);
 
 }
@@ -125,7 +129,7 @@ header img{
     left:0;
     position: absolute;
     content: "";
-    background-color: white;
+    background-color:  var(--bg);
     border-left: 3px solid #303030;
     width:56%;
     height:100%;
@@ -155,15 +159,15 @@ header img{
 .home-text h1{
     font-size: 3.5rem;
     font-weight: 700;
-    color:rgb(168, 142, 238);
+    color:var(--main);
 }
 .resume{
     margin: 20px 0;
 
 }
 #resume-button-2{
-    background: linear-gradient(134deg,rgb(168, 142, 238) 0%, rgb(168, 142, 238) 99%);
-    color: white;
+    background: linear-gradient(134deg,var(--main) 0%, var(--main) 99%);
+    color:  var(--bg);
     padding: 7px 9px;
     border-radius: 4px;
     font-size: 20px;
@@ -172,7 +176,7 @@ header img{
     width: 190px;
 }
 #resume-link-2{
-    color: white;
+    color: var(--bg);
 }
 
 .home-card-main{
@@ -183,9 +187,9 @@ header img{
 }
 .home-card{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    color:rgb(168, 142, 238);
+    color:var(--main);
     line-height: 1.8rem;
-    background-color: white;
+    background-color:  var(--bg);
     z-index: 100;
     padding: 40px 25px;
     border-radius: 10px;
@@ -208,7 +212,7 @@ header img{
     height: 100vh;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid white;
+    border-top: 1px solid  var(--bg);
 }
 
 #about>div:nth-child(1){
@@ -234,7 +238,7 @@ header img{
     flex-direction: column;
     justify-content: center;
     padding: 0 100px ;
-    color: white;
+    color:  var(--bg);
 }
 #about>div:nth-child(2)>h1{
     font-size: 2.5rem;
@@ -250,14 +254,14 @@ header img{
     padding: 10px 15px;
     color: rgb(66, 66, 66);
     border-radius: 5px;
-    background: linear-gradient(134deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 99%);
+    background: linear-gradient(134deg,  var(--bg) 0%,  var(--bg) 99%);
     font-size: 1.2rem;
     border: none;
     cursor: pointer;
 }
 #about>div:nth-child(2)>a:hover{
-    color: #ffffff;
-    background: rgb(168, 142, 238);
+    color:  var(--bg);
+    background: var(--main);
 }
 
 
@@ -366,11 +370,11 @@ header img{
 .project-card>div:nth-child(1){
     
     width: 60%;
-    
 }
 .project-card>div:nth-child(1)>img{
-    border: 1px solid white;
+    border: 1px solid  var(--bg);
     width: 100%;
+    height: 100%;
 }
 .project-card>div:nth-child(2){
     
@@ -382,8 +386,8 @@ header img{
 }
 .project-card>div:nth-child(2)>h1,.project-card>div:nth-child(2)>p,.project-card>div:nth-child(2)>h5,.project-card>div:nth-child(2)>a{
     margin: 15px 0;
-    font-size: 1.1rem;
-    color: white;
+    font-size: 1.0rem;
+    color:  var(--bg);
 }
 .project-card>div:nth-child(2)>div{
     margin-top: 55px;
@@ -393,15 +397,18 @@ header img{
     margin: 0 5px;
     border-radius: 5px;
     border: none;
-    background-color: white;
+    background-color:  var(--bg);
     color: #10151a;
     font-size: 1.1rem;
     cursor: pointer;
 }
+.project-card>div:nth-child(2) li{
+    font-weight: 100;
+}
 
 .project-card>div:nth-child(2) a:hover{
-    color: #ffffff;
-    background: rgb(168, 142, 238);
+    color:  var(--bg);
+    background: var(--main);
     
 }
 
@@ -457,7 +464,7 @@ header img{
 .contact-link>p {
     width: 50%;
     font-size: 22px;
-    color: #ffffff;
+    color:  var(--bg);
     
     margin: 20px auto;
 }
@@ -467,7 +474,7 @@ header img{
     display: flex;
     align-items: center;
     gap: 20px;
-    color: #ffffff;
+    color:  var(--bg);
 }
 
 .contact-link img {
@@ -482,7 +489,7 @@ header img{
     display: flex;
     flex-direction: column;
     font-size: 22px;
-    color: #ffffff;
+    color:  var(--bg);
     margin: auto;
 }
 
@@ -535,7 +542,7 @@ header img{
 
 .contact-form>form>button:hover {
     background-color: #667C89;
-    color: #ffffff;
+    color:  var(--bg);
 }
 .section-title{
     text-align: center;
@@ -544,38 +551,6 @@ header img{
     margin-bottom: 30px;
 }
 /* ---------------------------------Contact--------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -620,7 +595,7 @@ header img{
         border-radius: 10px;
         height:100%;
         margin:30px auto;
-        background-color: white;
+        background-color:  var(--bg);
     }
     .personal-info>div>div{
         margin:25px 30px;
@@ -636,19 +611,14 @@ header img{
         /* justify-content: center; */
         align-items: center;
         margin: 5px 10px;
-        color:rgb(168, 142, 238);
+        color:var(--main);
     }
     .info-head>i{
         margin-right: 8px;
         font-size: 12px;
     }
     
-    #contact-email>p{
-        /* border:1px solid red; */
-    }
-    .info-head> p{
-        /* border:1px solid red; */
-    }
+
     .send-info{
         /* border:1px solid black; */
         width:100%;
@@ -660,7 +630,7 @@ header img{
     .send-info>div{
         /* border:1px solid black; */
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background-color:white;
+        background-color: var(--bg);
         border-radius: 10px;
         width:50%;
         margin:20px auto;
@@ -680,7 +650,7 @@ header img{
     .input-box>p{
         padding: 10px 15px 0px;
         font-size: 14px;
-        color: rgb(168, 142, 238);
+        color: var(--main);
     }
     .input-box>input ,.input-box>textarea {
         background-color: #273036;
@@ -689,7 +659,7 @@ header img{
         border-radius:20px ;
         font-size: 14px;
         padding:0px 15px 10px;
-        color:white;
+        color: var(--bg);
         width: 100%;
         box-sizing: border-box;
     }
@@ -703,9 +673,9 @@ header img{
         /* margin: 15px 20px; */
         font-size: 12px;
         padding: 6px 10px;
-        background-color: rgb(168, 142, 238);
-        border: 2px solid rgb(168, 142, 238);
-        color:white;
+        background-color: var(--main);
+        border: 2px solid var(--main);
+        color: var(--bg);
         border-radius: 8px;
         cursor: pointer;
         user-select: none;
@@ -713,9 +683,9 @@ header img{
     }
     .submit-btn > button:hover{
        
-        background-color: white;
-        border: 2px solid rgb(168, 142, 238);
-        color:rgb(168, 142, 238);
+        background-color:  var(--bg);
+        border: 2px solid var(--main);
+        color:var(--main);
     
     }
 
@@ -726,7 +696,7 @@ header img{
 @media (max-width: 425px) {
     
     .home-social{
-        background-color: white;
+        background-color:  var(--bg);
         padding-top: 10px;
         border-radius: 5px;
         display: flex;
@@ -882,7 +852,7 @@ header img{
         margin-top: 60px;
         display: none;
         width: 50%;
-        background: rgb(255, 255, 255);
+        background:  var(--bg);
         height: auto;
         transition: all .50s ease;
     }
