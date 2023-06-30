@@ -386,7 +386,7 @@ header img{
 }
 .project-card>div:nth-child(2)>h1,.project-card>div:nth-child(2)>p,.project-card>div:nth-child(2)>h5,.project-card>div:nth-child(2)>a{
     margin: 15px 0;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color:  var(--bg);
 }
 .project-card>div:nth-child(2) li{
