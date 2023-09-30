@@ -314,18 +314,31 @@ header img{
     height: auto;
 }
 
-.github>h1{
+.github {
+    display: flex;                  
+    flex-direction: column;        
+    align-items: center;            
+    justify-content: center;       
+    width: 100%;                    
+    text-align: center;            
+}
+
+.github > h1 {
     text-align: center;
     font-size: 2.5rem;
     color: rgb(36, 36, 36);
     margin-bottom: 30px;
 }
-.github>div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.github > div {
+    display: flex;                  
+    flex-direction: column;        
+    align-items: center;           
+    justify-content: center;       
+    width: 100%;                   
+    max-width: 800px;              
 }
+
 .calendar{
     width:80%;
     background-color: #10151a;
