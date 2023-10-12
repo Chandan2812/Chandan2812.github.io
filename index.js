@@ -20,11 +20,11 @@ let btn1 = document.getElementById("resume-button-1");
 let btn2 = document.getElementById("resume-button-2");
 
 btn1.addEventListener("click", () => {
-    window.open("https://drive.google.com/file/d/1npf9juTxWWEifvuncpiDXpfEu3ZSxRRD/view?usp=sharing");
+    window.open("https://drive.google.com/file/d/1ObsjKlgkj_aVacszJF95EDlxw_u5NG6t/view?usp=sharing");
 });
 
 btn2.addEventListener("click", () => {
-    window.open("https://drive.google.com/file/d/1npf9juTxWWEifvuncpiDXpfEu3ZSxRRD/view?usp=sharing");
+    window.open("https://drive.google.com/file/d/1ObsjKlgkj_aVacszJF95EDlxw_u5NG6t/view?usp=sharing");
 });
 
 // Close the menu when a navigation link is clicked
