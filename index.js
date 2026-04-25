@@ -1,39 +1,24 @@
-let menu = document.getElementById("menu-icon");
-let navbar = document.getElementById("nav-menu"); 
-let m = document.querySelector(".main-body");
-let count = 0;
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+const currentYear = document.getElementById("current-year");
 
-// Toggle function for the menu
-function toggleMenu() {
-    menu.classList.toggle("bx-x");
-    navbar.classList.toggle("open");
-    count++;
-    m.classList.toggle("m-t");
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
 }
 
-menu.addEventListener("click", (event) => {
-    event.preventDefault(); 
-    toggleMenu();
-});
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+    menuToggle.classList.toggle("active", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-let btn1 = document.getElementById("resume-button-1");
-let btn2 = document.getElementById("resume-button-2");
-
-btn1.addEventListener("click", () => {
-    window.open("https://drive.google.com/file/d/1npf9juTxWWEifvuncpiDXpfEu3ZSxRRD/view?usp=sharing");
-});
-
-btn2.addEventListener("click", () => {
-    window.open("https://drive.google.com/file/d/1npf9juTxWWEifvuncpiDXpfEu3ZSxRRD/view?usp=sharing");
-});
-
-// Close the menu when a navigation link is clicked
-let navLinks = navbar.querySelectorAll("a");
-
-navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-        if (navbar.classList.contains("open")) {
-            toggleMenu();
-        }
+      navMenu.classList.remove("open");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
     });
-});
+  });
+}
